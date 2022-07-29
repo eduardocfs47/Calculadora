@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/RdGrup"
+        android:layout_width="148dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtValor1">
+
+        <RadioButton
+            android:id="@+id/optSoma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soma" />
+
+        <RadioButton
+            android:id="@+id/optSubtrai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtrai" />
+
+        <RadioButton
+            android:id="@+id/optMultiplica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplica" />
+
+        <RadioButton
+            android:id="@+id/optDivide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divide" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtValor1"
+        android:layout_width="113dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:ems="10"
+        android:inputType="number|textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/txtValor2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblValor1" />
+
+    <EditText
+        android:id="@+id/txtValor2"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/cmdCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lblValor2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblValor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:text="Valor 1"
+        app:layout_constraintStart_toStartOf="@+id/txtValor1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblValor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:text="Valor 2"
+        app:layout_constraintStart_toStartOf="@+id/txtValor2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="49dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cmdCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="calcular"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="@+id/lblResultado"
+        app:layout_constraintTop_toBottomOf="@+id/lblResultado" />
+
+    <Button
+        android:id="@+id/cmdLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:onClick="limpar"
+        android:text="Limpar"
+        app:layout_constraintStart_toStartOf="@+id/cmdCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/cmdCalcular" />
+</androidx.constraintlayout.widget.ConstraintLayout>
